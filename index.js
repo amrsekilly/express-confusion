@@ -7,6 +7,9 @@ var dishRouter = require("./dishRouter.js");
 // require the promotionsRouter module
 var promoRouter = require("./promoRouter.js");
 
+// require the leaderRouter module
+var leaderRouter = require("./leaderRouter.js");
+
 var hostname = 'localhost';
 var port = 3000;
 
@@ -17,6 +20,7 @@ app.use(morgan('dev'));
 // mounting the router modules on the URIs
 app.use('/dishes', dishRouter);
 app.use('/promotions', promoRouter);
+app.use('/leadership', leaderRouter);
 
 // serve some static resources
 app.use(express.static(__dirname + '/public'));
