@@ -1,4 +1,9 @@
+
+  var express = require('express');
+  var bodyParser = require('body-parser');
+
 module.exports = (function() {
+
   var dishRouter = express.Router();
 
   dishRouter.use(bodyParser.json());
@@ -40,4 +45,6 @@ module.exports = (function() {
   .delete(function(req, res, next){
           res.end('Deleting dish: ' + req.params.dishId);
   });
+
+  return dishRouter;
 })();
