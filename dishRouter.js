@@ -1,9 +1,7 @@
 
+module.exports = (function() {
   var express = require('express');
   var bodyParser = require('body-parser');
-
-module.exports = (function() {
-
   var dishRouter = express.Router();
 
   dishRouter.use(bodyParser.json());
